@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | HealthCare+</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>HealthCare<span>+</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html" class="btn active">Book Appointment</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book an Appointment</h1>
+            <p>Schedule your visit with our healthcare professionals</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-steps">
+                    <div class="step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-text">Select Service</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-text">Choose Doctor</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-text">Pick Date & Time</span>
+                    </div>
+                    <div class="step" data-step="4">
+                        <span class="step-number">4</span>
+                        <span class="step-text">Your Information</span>
+                    </div>
+                </div>
+
+                <form id="bookingForm" class="booking-form">
+                    <!-- Step 1: Select Service -->
+                    <div class="form-step active" id="step-1">
+                        <h3>Select a Service</h3>
+                        <div class="service-options">
+                            <div class="service-option">
+                                <input type="radio" id="general-medicine" name="service" value="General Medicine" required>
+                                <label for="general-medicine">
+                                    <i class="fas fa-stethoscope"></i>
+                                    <span>General Medicine</span>
+                                    <small>Routine check-ups and primary care services</small>
+                                </label>
+                            </div>
+                            <div class="service-option">
+                                <input type="radio" id="cardiology" name="service" value="Cardiology">
+                                <label for="cardiology">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Cardiology</span>
+                                    <small>Heart health and cardiovascular care</small>
+                                </label>
+                            </div>
+                            <div class="service-option">
+                                <input type="radio" id="pediatrics" name="service" value="Pediatrics">
+                                <label for="pediatrics">
+                                    <i class="fas fa-baby"></i>
+                                    <span>Pediatrics</span>
+                                    <small>Healthcare for infants, children, and adolescents</small>
+                                </label>
+                            </div>
+                            <div class="service-option">
+                                <input type="radio" id="dermatology" name="service" value="Dermatology">
+                                <label for="dermatology">
+                                    <i class="fas fa-allergies"></i>
+                                    <span>Dermatology</span>
+                                    <small>Skin, hair, and nail care</small>
+                                </label>
+                            </div>
+                            <div class="service-option">
+                                <input type="radio" id="orthopedics" name="service" value="Orthopedics">
+                                <label for="orthopedics">
+                                    <i class="fas fa-bone"></i>
+                                    <span>Orthopedics</span>
+                                    <small>Bone and joint care</small>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-primary next-step" data-next="2">Next: Choose Doctor</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Choose Doctor -->
+                    <div class="form-step" id="step-2">
+                        <h3>Select a Doctor</h3>
+                        <div class="doctor-selection">
+                            <div class="doctor-card">
+                                <input type="radio" id="dr-smith" name="doctor" value="Dr. Sarah Smith" required>
+                                <label for="dr-smith">
+                                    <img src="images/doctor1.jpg" alt="Dr. Sarah Smith">
+                                    <div class="doctor-info">
+                                        <h4>Dr. Sarah Smith</h4>
+                                        <p>General Medicine</p>
+                                        <div class="doctor-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span>4.7 (128 reviews)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="doctor-card">
+                                <input type="radio" id="dr-johnson" name="doctor" value="Dr. Michael Johnson">
+                                <label for="dr-johnson">
+                                    <img src="images/doctor2.jpg" alt="Dr. Michael Johnson">
+                                    <div class="doctor-info">
+                                        <h4>Dr. Michael Johnson</h4>
+                                        <p>Cardiology</p>
+                                        <div class="doctor-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>4.5 (96 reviews)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="doctor-card">
+                                <input type="radio" id="dr-williams" name="doctor" value="Dr. Emily Williams">
+                                <label for="dr-williams">
+                                    <img src="images/doctor3.jpg" alt="Dr. Emily Williams">
+                                    <div class="doctor-info">
+                                        <h4>Dr. Emily Williams</h4>
+                                        <p>Pediatrics</p>
+                                        <div class="doctor-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>4.9 (215 reviews)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="1">Back</button>
+                            <button type="button" class="btn btn-primary next-step" data-next="3">Next: Date & Time</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Date & Time -->
+                    <div class="form-step" id="step-3">
+                        <h3>Select Date & Time</h3>
+                        <div class="datetime-selection">
+                            <div class="calendar">
+                                <div class="calendar-header">
+                                    <button type="button" class="nav-arrow" id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                                    <h4 id="current-month">September 2023</h4>
+                                    <button type="button" class="nav-arrow" id="next-month"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="weekdays">
+                                    <div>Sun</div>
+                                    <div>Mon</div>
+                                    <div>Tue</div>
+                                    <div>Wed</div>
+                                    <div>Thu</div>
+                                    <div>Fri</div>
+                                    <div>Sat</div>
+                                </div>
+                                <div class="days" id="calendar-days">
+                                    <!-- Calendar days will be populated by JavaScript -->
+                                </div>
+                            </div>
+                            <div class="time-slots">
+                                <h4>Available Time Slots</h4>
+                                <div class="time-options" id="time-slots">
+                                    <p>Please select a date to see available time slots.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="2">Back</button>
+                            <button type="button" class="btn btn-primary next-step" data-next="4">Next: Your Information</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Personal Information -->
+                    <div class="form-step" id="step-4">
+                        <h3>Your Information</h3>
+                        <div class="form-group">
+                            <label for="full-name">Full Name*</label>
+                            <input type="text" id="full-name" name="fullName" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number*</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth*</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender">
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-to-say">Prefer not to say</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="insurance">Insurance Provider (if any)</label>
+                            <input type="text" id="insurance" name="insurance">
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Additional Notes or Questions</label>
+                            <textarea id="notes" name="notes" rows="3"></textarea>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="3">Back</button>
+                            <button type="submit" class="btn btn-primary">Confirm Appointment</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Confirmation Message (initially hidden) -->
+                <div class="confirmation-message" id="confirmation-message">
+                    <div class="confirmation-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Appointment Confirmed!</h2>
+                    <p>Your appointment has been successfully scheduled.</p>
+                    <div class="appointment-details">
+                        <p><strong>Service:</strong> <span id="confirm-service"></span></p>
+                        <p><strong>Doctor:</strong> <span id="confirm-doctor"></span></p>
+                        <p><strong>Date:</strong> <span id="confirm-date"></span></p>
+                        <p><strong>Time:</strong> <span id="confirm-time"></span></p>
+                    </div>
+                    <p>We've sent a confirmation email with all the details. Please arrive 15 minutes before your scheduled time.</p>
+                    <a href="index.html" class="btn btn-primary">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>HealthCare<span>+</span></h3>
+                    <p>Providing exceptional healthcare services with compassion and excellence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html#general-medicine">General Medicine</a></li>
+                        <li><a href="services.html#cardiology">Cardiology</a></li>
+                        <li><a href="services.html#pediatrics">Pediatrics</a></li>
+                        <li><a href="services.html#dermatology">Dermatology</a></li>
+                        <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Health St, Medical District, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@healthcareplus.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 HealthCare+. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
